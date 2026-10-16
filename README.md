@@ -2,7 +2,7 @@
 
 An isolated cybersecurity practice lab running on a Raspberry Pi 5. Kali Linux is the attacker machine, and Docker containers (Ubuntu 22.04 and OWASP Juice Shop) are the targets.
 
-![Lab hardware](IMG_20261015_181642.jpg)
+![Lab hardware](cyberlab.png)
 
 ## Lab overview
 
