@@ -1,0 +1,22 @@
+# Cyber lab targets: Ubuntu 22.04 and OWASP Juice Shop
+# Start:  docker compose up -d
+# Stop:   docker compose down
+services:
+  ubuntu-target:
+    image: ubuntu:22.04
+    container_name: cyberlab-ubuntu
+    stdin_open: true
+    tty: true
+    command: bash
+    networks: [cyberlab-net]
+
+  juice-shop:
+    image: bkimminich/juice-shop
+    container_name: juice-shop
+    ports:
+      - "127.0.0.1:3000:3000"   # reachable only from this machine
+    networks: [cyberlab-net]
+
+networks:
+  cyberlab-net:
+    driver: bridge
